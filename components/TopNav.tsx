@@ -49,12 +49,6 @@ const TopNav = ({ title }: { title?: string }) => {
 				<SignedIn>
 					<UserButton />
 				</SignedIn>
-				<Button
-					size='icon'
-					variant='outline'
-				>
-					<Info />
-				</Button>
 			</div>
 		</div>
 	);
