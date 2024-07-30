@@ -116,11 +116,6 @@ const CustomFormField = ({
 										popperPlacement='top'
 									/>
 								</div>
-							) : type === 'file' ? (
-								<ImageUpload
-									value={field.value}
-									onChange={image => field.onChange(image)}
-								/>
 							) : (
 								<Input
 									className={className}

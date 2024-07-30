@@ -26,7 +26,6 @@ export function CreateCustomerForm({ clerkUserId }: CreateCustomerFormProps) {
 		defaultValues: {
 			name: '',
 			email: '',
-			imageUrl: '',
 		},
 	});
 
@@ -53,12 +52,6 @@ export function CreateCustomerForm({ clerkUserId }: CreateCustomerFormProps) {
 							name='email'
 							label='Email'
 							type='text'
-						/>
-						<CustomFormField
-							form={form}
-							name='imageUrl'
-							label='Image'
-							type='file'
 						/>
 						<Button
 							className='mt-6 transition-all bg-white'

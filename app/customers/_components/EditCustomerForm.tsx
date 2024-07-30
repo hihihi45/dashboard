@@ -33,7 +33,6 @@ export function EditCustomerForm({
 		defaultValues: {
 			name: customer.name,
 			email: customer.email,
-			imageUrl: customer.imageUrl,
 		},
 	});
 
@@ -60,12 +59,6 @@ export function EditCustomerForm({
 							name='email'
 							label='Email'
 							type='text'
-						/>
-						<CustomFormField
-							form={form}
-							name='imageUrl'
-							label='Image'
-							type='file'
 						/>
 						<Button
 							className='mt-6 transition-all bg-white'
