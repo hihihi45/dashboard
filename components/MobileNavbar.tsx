@@ -47,7 +47,7 @@ const MobileNavbar = () => {
 					</div>
 				))}
 				<SignedOut>
-					<SignInButton>
+					<SignInButton mode='modal'>
 						<Button>Sign In</Button>
 					</SignInButton>
 				</SignedOut>
