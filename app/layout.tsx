@@ -56,7 +56,7 @@ export default function RootLayout({
 							<div className='md:hidden sticky top-0 z-50'>
 								<MobileNavbar />
 							</div>
-							<div className='flex-grow flex pb-4'>
+							<div className='flex-grow flex pb-4 md:pb-0'>
 								<div className='w-full max-w-6xl mx-auto'>
 									<ThemeProvider
 										attribute='class'
