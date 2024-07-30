@@ -44,7 +44,7 @@ export default function RootLayout({
 				className='h-full'
 			>
 				<body className={`${inter.className} h-full`}>
-					<main className='flex flex-col md:flex-row h-full overflow-hidden'>
+					<main className='flex flex-col md:flex-row h-full'>
 						<Sidebar />
 
 						<div className='flex-1 flex flex-col min-h-screen w-full px-4 md:p-4'>
