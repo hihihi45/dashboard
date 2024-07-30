@@ -3,6 +3,14 @@
 @tailwind utilities;
 @import 'normalize.css';
 
+.cl-formButtonPrimary {
+	@apply bg-sky-100 text-primary-foreground hover:bg-sky-100/90;
+}
+
+.cl-button {
+	@apply text-primary-foreground hover:bg-sky-100/90;
+}
+
 * {
 	color: rgb(56, 56, 56);
 }
