@@ -74,7 +74,7 @@ export default function Chart({ clerkUserId }: { clerkUserId: string }) {
 
 	return (
 		<div className='w-full md:col-span-4'>
-			<div className='h-[41.5vh] rounded-lg bg-sky-100 p-4'>
+			<div className='h-[42.5vh] rounded-lg bg-sky-100 p-4'>
 				<ResponsiveContainer
 					width='100%'
 					height='100%'

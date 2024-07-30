@@ -28,7 +28,7 @@ export default async function LatestInvoices() {
 							</p>
 						</div>
 					) : (
-						<div className=''>
+						<div className='h-full md:pt-5'>
 							{latestInvoices.slice(0, 5).map((invoice, i) => (
 								<div
 									key={invoice.id}

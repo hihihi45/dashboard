@@ -10,7 +10,7 @@ type InvoiceSearchCondition =
 	| { date: { equals: Date | undefined } }
 	| { status: { equals: InvoiceStatus | undefined } };
 
-export async function getInvoicesPages(query: string) {
+export async function getInvoicesPages(query: string, clerkUserId: string) {
 	try {
 		const orConditions: InvoiceSearchCondition[] = [
 			{ customer: { name: { contains: query, mode: 'insensitive' } } },
@@ -38,9 +38,9 @@ export async function getInvoicesPages(query: string) {
 			condition => Object.values(condition)[0]?.equals !== undefined
 		);
 
-		const whereClause: Prisma.InvoiceWhereInput = query
-			? { OR: filteredConditions }
-			: {};
+		const whereClause: Prisma.InvoiceWhereInput = {
+			AND: [{ OR: filteredConditions }, { clerkUserId: clerkUserId }],
+		};
 
 		const count = await prisma.invoice.count({
 			where: whereClause,
