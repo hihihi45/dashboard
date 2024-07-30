@@ -17,7 +17,6 @@ export async function getLatestInvoices(clerkUserId: string) {
 					select: {
 						name: true,
 						email: true,
-						imageUrl: true,
 					},
 				},
 			},
@@ -28,7 +27,6 @@ export async function getLatestInvoices(clerkUserId: string) {
 			amount: formatPrice(invoice.amount),
 			name: invoice.customer.name,
 			email: invoice.customer.email,
-			image_url: invoice.customer.imageUrl,
 			date: invoice.date,
 		}));
 		revalidatePath('/');

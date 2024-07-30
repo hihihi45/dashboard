@@ -14,7 +14,6 @@ const formSchema = z.object({
 		message: 'Name must be at least 2 characters.',
 	}),
 	email: z.string().email({ message: 'Invalid email address.' }),
-	imageUrl: z.string().min(2, { message: 'Invalid image URL.' }),
 });
 
 interface EditCustomerFormProps {

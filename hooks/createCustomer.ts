@@ -3,7 +3,7 @@ import { CreateCustomerFormData } from '@/types';
 import { revalidatePath } from 'next/cache';
 
 export async function createCustomer(formData: CreateCustomerFormData) {
-	const { name, email, imageUrl, clerkUserId } = formData;
+	const { name, email, clerkUserId } = formData;
 
 	try {
 		let user = await prisma.user.findUnique({
@@ -22,7 +22,6 @@ export async function createCustomer(formData: CreateCustomerFormData) {
 			data: {
 				name: name as string,
 				email: email as string,
-				imageUrl: imageUrl as string,
 				clerkUserId: clerkUserId as string,
 			},
 		});

@@ -3,7 +3,7 @@ import { Customer } from '@/types';
 import { revalidatePath } from 'next/cache';
 
 export async function editCustomer(formData: Customer, clerkUserId: string) {
-	const { id, name, email, imageUrl } = formData;
+	const { id, name, email } = formData;
 
 	try {
 		const invoice = await prisma.customer.update({
@@ -14,7 +14,6 @@ export async function editCustomer(formData: Customer, clerkUserId: string) {
 			data: {
 				name: name as string,
 				email: email as string,
-				imageUrl: imageUrl as string,
 			},
 		});
 

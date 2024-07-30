@@ -50,7 +50,6 @@ export async function getFilteredInvoices(
 					select: {
 						name: true,
 						email: true,
-						imageUrl: true,
 					},
 				},
 			},

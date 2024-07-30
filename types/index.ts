@@ -9,7 +9,6 @@ export interface InvoiceWithCustomer {
 	customer: {
 		name: string;
 		email: string;
-		imageUrl: string;
 	};
 }
 
@@ -26,7 +25,6 @@ export interface CustomersWithStatus {
 export interface CreateCustomerFormData {
 	name: string;
 	email: string;
-	imageUrl: string | File;
 	clerkUserId: string;
 }
 
@@ -50,5 +48,4 @@ export interface Customer {
 	id: string;
 	name: string;
 	email: string;
-	imageUrl: string;
 }

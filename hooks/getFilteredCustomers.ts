@@ -22,7 +22,6 @@ export async function getFilteredCustomers(
 				id: true,
 				name: true,
 				email: true,
-				imageUrl: true,
 				invoices: {
 					select: {
 						amount: true,
@@ -50,7 +49,6 @@ export async function getFilteredCustomers(
 				id: customer.id,
 				name: customer.name,
 				email: customer.email,
-				image_url: customer.imageUrl,
 				total_invoices: totalInvoices,
 				total_pending: totalPending,
 				total_paid: totalPaid,
