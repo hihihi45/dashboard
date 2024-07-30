@@ -18,7 +18,7 @@ export default async function LatestInvoices() {
 					<h3 className='ml-2  truncate'>Latest Invoices</h3>
 				</div>
 
-				<div className='bg-white h-[92%] md:h-[95%] rounded-lg shadow-md py-5'>
+				<div className='bg-white h-[40vh] md:h-[77vh] rounded-lg shadow-md py-5'>
 					{latestInvoices.length === 0 ? (
 						<div className='flex flex-col items-center justify-center py-12 px-4'>
 							<p className='mt-4 text-lg font-medium text-gray-600'>

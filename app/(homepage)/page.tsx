@@ -15,7 +15,6 @@ import { formatPrice } from '@/lib/formatPrice';
 export default async function Home() {
 	const { userId: clerkUserId } = auth();
 	const cardData = await getCardData(clerkUserId || '');
-	console.log(cardData);
 
 	return (
 		<main className='w-full h-full flex flex-col '>
