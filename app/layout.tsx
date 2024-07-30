@@ -52,11 +52,11 @@ export default function RootLayout({
 					<main className='flex flex-col md:flex-row h-full'>
 						<Sidebar />
 
-						<div className='flex-1 flex flex-col min-h-screen w-full p-4'>
+						<div className='flex-1 flex flex-col min-h-screen w-full px-4 md:p-4'>
 							<div className='md:hidden sticky top-0 z-50'>
 								<MobileNavbar />
 							</div>
-							<div className='flex-grow flex'>
+							<div className='flex-grow flex pb-4'>
 								<div className='w-full max-w-6xl mx-auto'>
 									<ThemeProvider
 										attribute='class'
