@@ -25,10 +25,14 @@ export default async function InvoicesTable({
 		<div className='flow-root w-full'>
 			<div className='inline-block min-w-full align-middle'>
 				<div className='rounded-lg bg-sky-100 p-2 md:pt-0'>
-					{/* Conditional rendering for empty invoices list */}
 					{invoices.length === 0 ? (
-						<div className='text-center py-4'>
-							<p>Create your first invoice and it will appear here.</p>
+						<div className='flex flex-col items-center justify-center py-12 px-4'>
+							<p className='mt-4 text-lg font-medium text-gray-600'>
+								No invoices available
+							</p>
+							<p className='mt-2 text-sm text-gray-500 text-center'>
+								When you create invoices, they'll appear here.
+							</p>
 						</div>
 					) : (
 						<>
