@@ -1,9 +1,9 @@
-import Image from 'next/image';
 import { getFilteredCustomers } from '@/hooks/getFilteredCustomers';
 import { CustomersWithStatus } from '@/types';
 import { DeleteCustomer, UpdateCustomer } from '@/components/Buttons';
 import { formatPrice } from '@/lib/formatPrice';
 import { auth } from '@clerk/nextjs/server';
+import CustomerAvatar from '@/components/CustomerAvatar';
 
 export default async function CustomersTable({
 	query,
@@ -44,13 +44,7 @@ export default async function CustomersTable({
 										<div className='flex items-center justify-between border-b pb-4'>
 											<div>
 												<div className='mb-2 flex items-center'>
-													<Image
-														src={customer.image_url}
-														className='mr-2 rounded-full'
-														width={28}
-														height={28}
-														alt={`${customer.name}'s profile picture`}
-													/>
+													<CustomerAvatar name={customer.name} />
 													<p>{customer.name}</p>
 												</div>
 												<p className='text-sm text-sky-1000'>
@@ -128,13 +122,7 @@ export default async function CustomersTable({
 										>
 											<td className='whitespace-nowrap py-3 pl-6 pr-3'>
 												<div className='flex items-center gap-3'>
-													<Image
-														src={customer.image_url}
-														className='rounded-full hidden lg:block'
-														width={28}
-														height={28}
-														alt={`${customer.name}'s profile picture`}
-													/>
+													<CustomerAvatar name={customer.name} />
 													<p className='truncate'>{customer.name}</p>
 												</div>
 											</td>

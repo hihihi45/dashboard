@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { getLatestInvoices } from '@/hooks/getLatestInvoices';
 import InboxIcon from '@heroicons/react/24/outline/InboxIcon';
 import { auth } from '@clerk/nextjs/server';
+import CustomerAvatar from '@/components/CustomerAvatar';
 
 export default async function LatestInvoices() {
 	const { userId: clerkUserId } = auth();
@@ -40,13 +41,7 @@ export default async function LatestInvoices() {
 									)}
 								>
 									<div className='flex items-center'>
-										<Image
-											src={invoice.image_url}
-											alt={`${invoice.name}'s profile picture`}
-											className='mr-4 rounded-full md:hidden lg:block'
-											width={32}
-											height={32}
-										/>
+										<CustomerAvatar name={invoice.name} />
 										<div className='min-w-0'>
 											<p className='truncate text-sm md:text-base font-medium'>
 												{invoice.name}
@@ -72,13 +67,7 @@ export default async function LatestInvoices() {
 									)}
 								>
 									<div className='flex items-center'>
-										<Image
-											src={invoice.image_url}
-											alt={`${invoice.name}'s profile picture`}
-											className='mr-4 rounded-full md:hidden lg:block'
-											width={32}
-											height={32}
-										/>
+										<CustomerAvatar name={invoice.name} />
 										<div className='min-w-0'>
 											<p className='truncate text-sm md:text-base font-medium'>
 												{invoice.name}

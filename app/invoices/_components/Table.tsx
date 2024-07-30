@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { DeleteInvoice, UpdateInvoice } from '@/components/Buttons';
 import InvoiceStatus from './Status';
 import { formatPrice } from '@/lib/formatPrice';
@@ -6,6 +5,7 @@ import { formatDate } from '@/lib/formatDate';
 import { getFilteredInvoices } from '@/hooks/getFilteredInvoices';
 import { InvoiceWithCustomer } from '@/types';
 import { auth } from '@clerk/nextjs/server';
+import CustomerAvatar from '@/components/CustomerAvatar';
 
 export default async function InvoicesTable({
 	query,
@@ -46,13 +46,7 @@ export default async function InvoicesTable({
 										<div className='flex items-center justify-between border-b pb-4'>
 											<div>
 												<div className='mb-2 flex items-center'>
-													<Image
-														src={invoice.customer.imageUrl}
-														className='mr-2 rounded-full'
-														width={28}
-														height={28}
-														alt={`${invoice.customer.name}'s profile picture`}
-													/>
+													<CustomerAvatar name={invoice.customer.name} />
 													<p>{invoice.customer.name}</p>
 												</div>
 												<p className='text-sm text-sky-1000'>
@@ -130,13 +124,7 @@ export default async function InvoicesTable({
 										>
 											<td className='whitespace-nowrap py-3 pl-6 pr-3'>
 												<div className='flex items-center gap-3'>
-													<Image
-														src={invoice.customer.imageUrl}
-														className='rounded-full md:hidden lg:block'
-														width={28}
-														height={28}
-														alt={`${invoice.customer.name}'s profile picture`}
-													/>
+													<CustomerAvatar name={invoice.customer.name} />
 													<p className='truncate'>{invoice.customer.name}</p>
 												</div>
 											</td>
