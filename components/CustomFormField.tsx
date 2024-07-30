@@ -18,7 +18,6 @@ import { RadioGroup, RadioGroupItem } from './ui/radio-group';
 import { Label } from './ui/label';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import ImageUpload from '@/app/customers/_components/ImageUpload';
 
 interface CustomerProps {
 	id: string;
