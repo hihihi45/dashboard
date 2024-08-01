@@ -9,6 +9,21 @@
 	box-sizing: border-box;
 }
 
+@media screen and (max-width: 601px) {
+	* {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	* {
+		scrollbar-width: none;
+		-ms-overflow-style: none;
+	}
+	*::-webkit-scrollbar {
+		display: none;
+	}
+}
+
 .cl-formButtonPrimary {
 	@apply bg-sky-100 text-primary-foreground hover:bg-sky-100/90;
 }
