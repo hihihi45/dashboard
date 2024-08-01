@@ -9,6 +9,10 @@
 	box-sizing: border-box;
 }
 
+body {
+	cursor: default;
+}
+
 @media screen and (max-width: 601px) {
 	* {
 		-webkit-font-smoothing: antialiased;
