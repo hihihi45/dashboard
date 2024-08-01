@@ -19,14 +19,14 @@ const sidebarItems = [
 		href: '/',
 	},
 	{
-		name: 'Invoices',
-		icon: <PoundSterling size={16} />,
-		href: '/invoices',
-	},
-	{
 		name: 'Customers',
 		icon: <File size={16} />,
 		href: '/customers',
+	},
+	{
+		name: 'Invoices',
+		icon: <PoundSterling size={16} />,
+		href: '/invoices',
 	},
 ];
 

@@ -16,14 +16,14 @@ const mobileNavbarItems = [
 		href: '/',
 	},
 	{
-		name: 'Invoices',
-		icon: <PoundSterling />,
-		href: '/invoices',
-	},
-	{
 		name: 'Customers',
 		icon: <File />,
 		href: '/customers',
+	},
+	{
+		name: 'Invoices',
+		icon: <PoundSterling />,
+		href: '/invoices',
 	},
 ];
 
