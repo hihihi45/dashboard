@@ -81,6 +81,7 @@ const CustomFormField = ({
 									{...field}
 									className={className}
 									placeholder='Create a customer first before creating invoices'
+									disabled={customers?.length === 0}
 								/>
 							) : customers && customers?.length > 0 ? (
 								<Select

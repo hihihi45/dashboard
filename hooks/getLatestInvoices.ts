@@ -8,7 +8,7 @@ export async function getLatestInvoices(clerkUserId: string) {
 			where: {
 				clerkUserId: clerkUserId as string,
 			},
-			take: 8,
+			take: 9,
 			orderBy: {
 				date: 'desc',
 			},

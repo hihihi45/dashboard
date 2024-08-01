@@ -93,7 +93,12 @@ export default function Chart({ clerkUserId }: { clerkUserId: string }) {
 								offset: 10,
 							}}
 							domain={['auto', 'auto']}
-							tickFormatter={value => '£' + value}
+							tickFormatter={value => {
+								if (value >= 1000) {
+									return '£' + (value / 1000).toFixed(0) + 'k';
+								}
+								return '£' + value;
+							}}
 						/>
 						<Tooltip content={<CustomTooltip />} />
 						<Legend />

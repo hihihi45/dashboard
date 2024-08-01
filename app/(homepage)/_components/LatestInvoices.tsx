@@ -29,7 +29,11 @@ export default async function LatestInvoices() {
 						</div>
 					) : (
 						<div className='flex flex-col h-full overflow-auto'>
-							<div className='flex flex-col justify-center min-h-full'>
+							<div
+								className={`flex flex-col min-h-full ${
+									latestInvoices.length === 9 && 'justify-center'
+								}`}
+							>
 								{latestInvoices.slice(0, 5).map((invoice, i) => (
 									<div
 										key={invoice.id}
